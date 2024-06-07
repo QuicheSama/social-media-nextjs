@@ -1,5 +1,4 @@
 import { User } from "@/types/user"
-import { headers } from "next/headers";
 
 type ProfilePageProps = {
     params: {
