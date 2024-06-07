@@ -1,9 +1,9 @@
 import { Message } from "@/types/message";
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextRequest } from "next/server";
 import { allmessages } from "@/mockdata/messages";
 type MessageResponse = Array<Message>;
 
-async function GET(req: NextApiRequest) {
+async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url || '');
     const result = allmessages.filter((message) => {
         return (

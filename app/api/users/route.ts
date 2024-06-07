@@ -1,7 +1,7 @@
 import { allusers } from "@/mockdata/users";
-import type { NextApiRequest } from "next";
+import type { NextRequest } from "next/server";
 
-async function GET(req: NextApiRequest) {
+async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url || '');
     const results = allusers.filter(user => {
         return searchParams.has('id') ? searchParams.get('id') === user.id : true
