@@ -4,6 +4,7 @@ type User = {
     lastName: string;
     // Date of birth is optional since it's for demonstration purposes. 
     dob?: Date;
+    // Profile info is also optional for demonstration purposes
     profile?: Profile
 };
 
